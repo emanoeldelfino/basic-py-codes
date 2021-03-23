@@ -13,7 +13,7 @@ if len(sys.argv) == 2:
 
 	cases, deaths, recovered = [elem.getText() for elem in soap.select("div[class='maincounter-number'] span")]
 
-	active_cases, closed_cases = [elem.getText() for elem in soap.select("div[class='number-table-main']")]
+	# active_cases, closed_cases = [elem.getText() for elem in soap.select("div[class='number-table-main']")]
 	
 	mild, serious = [elem.getText() for elem in soap.select("span[class='number-table']")[:2]]
 
@@ -35,5 +35,4 @@ if len(sys.argv) == 2:
 else:
 	print('Invalid command.')
 	print(f'Try: python {__file__} <country>')
-
 
